@@ -49,19 +49,19 @@ def Auto3DShp(CSV,Shape3D):
 	champs.append(QgsField("Z",QVariant.Double))
 	# fichier polygone
 	fichierPolygon=Shape3D+'/Polygon.gpkg'
-	writerPoly = QgsVectorFileWriter(fichierPolygon,"utf-8",champs,QgsWkbType.PolygonZ,crsproject)
+	writerPoly = QgsVectorFileWriter(fichierPolygon,"utf-8",champs,Qgis.WkbType.PolygonZ,crsproject)
 	#fichier ligne
 	fichierPolyline=Shape3D+'/Line.gpkg'
-	writerLine = QgsVectorFileWriter(fichierPolyline,"utf-8",champs,QgsWkbType.LineStringZ,crsproject)
+	writerLine = QgsVectorFileWriter(fichierPolyline,"utf-8",champs,Qgis.WkbType.LineStringZ,crsproject)
 	#fichier point topo (ortho, coupes, plans, stations, etc.)
 	fichierPointTopo=Shape3D+'/Topo.gpkg'
-	writerPt = QgsVectorFileWriter(fichierPointTopo,"utf-8",champs,QgsWkbType.PointZ,crsproject)
+	writerPt = QgsVectorFileWriter(fichierPointTopo,"utf-8",champs,Qgis.WkbType.PointZ,crsproject)
 	#fichiers isolats
 	fichierISO=Shape3D+'/ISO.gpkg'
-	writerISO = QgsVectorFileWriter(fichierISO,"utf-8",champs,QgsWkbType.PointZ,crsproject)
+	writerISO = QgsVectorFileWriter(fichierISO,"utf-8",champs,Qgis.WkbType.PointZ,crsproject)
 	#Fichier MNT
 	fichierMNT =  Shape3D+'/PtMNT.gpkg'
-	writerMNT= QgsVectorFileWriter(fichierMNT,"utf-8",champs,QgsWkbType.PointZ,crsproject)
+	writerMNT= QgsVectorFileWriter(fichierMNT,"utf-8",champs,Qgis.WkbType.PointZ,crsproject)
 
 	# parametres fin de ligne OS
 	windows='\r\n'
