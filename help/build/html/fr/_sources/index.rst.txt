@@ -1,0 +1,101 @@
+.. Anaximandre documentation master file, created by
+   sphinx-quickstart on Sun Feb 12 17:11:03 2012.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Documentation du plugin Anaximandre
+============================================
+
+.. toctree::
+   :maxdepth: 2
+
+
+Présentation
+=================
+Le plugin Anaximandre permet de générer à partir d’une couche de points au format csv des couches shapefiles (.shp) 3D de polygones, lignes et points.  
+
+Les points doivent comporter en plus de leurs coordonnées des valeurs descriptives permettant de les regrouper et une valeur de code définissant la géométrie à générer. 
+
+Ces codes sont: 
+
+* Pour un polygone : 'p'
+* Pour une ligne : 'l'
+* Pour un point : 'pt'
+* Pour des points de repère reliés: 'pt cpe'
+* Pour un point d'isolat : 'iso'
+* Pour un point de mnt : 'pt mnt'
+* Pour un cercle : 'c,' suivi de son diamètre en mètre
+
+L'ordre des points dans le fichier doit respecter quelques règles: 
+
+* Les points doivent suivre le tracé de la ligne ou du polygone voulu
+* Pour les cercles, le centre du cercle sera utilisé
+* Pour les mnt, pas d'ordre particulier
+
+Le résultat sera un ensemble de couches comportant les entités en 3D ainsi que les attributs suivants: 
+* La première description ( par exemple US)
+* La deuxième description ( par exemple le type)
+* Le Z moyen
+	
+.. index:: Description de la boîtes de dialogue
+
+La boîte de dialogue 
+======================
+Le plugin prend deux paramètres en entrée:
+ 
+* un fichier csv : **Fichier csv**
+
+* l'emplacement des fichiers qui seront créés: **sortie**
+ 
+
+.. image:: images/Dialogue.png
+	:height: 400 px
+	:width: 400 px
+	:align: center
+
+Lorsqu'un fichier csv est sélectionné, les données de la première ligne du fichier sont affichées afin de vérifier leurs conformités
+
+.. image:: images/Dialogue2.png
+	:height: 400 px
+	:width: 400 px
+	:align: center
+
+
+Le bouton **OK** lance le programme et charge dans le canvas les couches créées.
+
+Carnet de codification
+=======================
+
+Exemple de carnet de codification svg sous forme de feuillets A6
+
+.. image:: images/LivretCodif.svg
+	:height: 600 px
+	:width: 400 px
+	:align: center
+ 
+
+
+Source
+=================
+
+Le code source est disponible à l’adresse suivante : 
+
+https://github.com/FFouriauxEveha/Anaximandre
+
+Crédits
+========
+
+Conception/réalisation: F. Fouriaux
+Test : R. Lacey et B. Hollemaert
+Traduction : R. Lacey
+
+
+.. Index et tables
+==================
+
+.. * :ref:`genindex`
+
+.. * :ref:`modindex`
+
+.. * :ref:`search`
+

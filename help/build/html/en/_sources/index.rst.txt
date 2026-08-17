@@ -1,0 +1,101 @@
+.. Anaximandre documentation master file, created by
+   sphinx-quickstart on Sun Feb 12 17:11:03 2012.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Documentation for the Anaximandre plugin
+============================================
+
+.. toctree::
+   :maxdepth: 2
+
+
+Introduction
+=================
+The Anaximandre plugin enables the creation of 3D polygon, line and point shapefiles (.shp) from a points layer in csv format. 
+The points must include, in addition to their coordinates, descriptive values which allow them to be grouped, and a code value which defines the geometry to be generated. 
+The codes are:
+
+* For a polygon : 'p'
+* For a line : 'l'
+* For a point : 'pt'
+* For linked reference points : 'pt cpe'
+* For an isolated artefact : 'iso'
+* For a DEM point : 'pt mnt'
+* For a circle : 'c', followed by its diameter in meters
+
+The order of the points in the file must follow a few rules: 
+
+* The points must follow the outline of the intended line or polygon
+* For circles, the center of the circle will be used
+* For DEMs, there is no particular order
+
+The result will be a group of layers containing 3D entities as well as the following attributes: 
+
+* First description (e.g. context number) 
+* Second description (e.g. type) 
+* Average Z
+
+	
+.. index:: Description de la boîtes de dialogue
+
+The dialog box
+======================
+The plugin requires two initial parameters:
+ 
+* a csv file: **CSV File**
+
+* The location for the output files: **Output**
+ 
+
+.. image:: images/Dialogue.png
+	:height: 400 px
+	:width: 400 px
+	:align: center
+
+When a csv file is selected, the data in the first line of the file are shown in order to verify their conformity
+
+.. image:: images/Dialogue2.png
+	:height: 400 px
+	:width: 400 px
+	:align: center
+
+
+The **OK** button launches the program and loads the layers onto the map 
+
+Codification booklet
+=======================
+
+Example of the svg codification booklet, in A6 page format
+
+.. image:: images/LivretCodif_EN.svg
+	:height: 600 px
+	:width: 400 px
+	:align: center
+ 
+
+
+Source
+=================
+
+The source code can be found at the following address: 
+
+https://github.com/FFouriauxEveha/Anaximandre
+
+About
+========
+
+Design/Developpement: F. Fouriaux
+Test : R. Lacey et B. Hollemaert
+Translation : R. Lacey
+
+
+.. Index et tables
+==================
+
+.. * :ref:`genindex`
+
+.. * :ref:`modindex`
+
+.. * :ref:`search`
+

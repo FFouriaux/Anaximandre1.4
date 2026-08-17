@@ -1,0 +1,164 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentation for the Anaximandre plugin &#8212; Anaximandre 1.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/icon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Anaximandre 1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="documentation-for-the-anaximandre-plugin">
+<h1>Documentation for the Anaximandre plugin<a class="headerlink" href="#documentation-for-the-anaximandre-plugin" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The Anaximandre plugin enables the creation of 3D polygon,&nbsp;line and point geopackage files (.gpkg) from a points layer in csv format.
+The points must include, in addition to their coordinates, descriptive values which allow them to be grouped, and a code value which defines the geometry to be generated.
+The codes are:</p>
+<ul class="simple">
+<li>For a polygon : ‘p’</li>
+<li>For a line : ‘l’</li>
+<li>For a point : ‘pt’</li>
+<li>For linked reference points : ‘pt cpe’</li>
+<li>For an isolated artefact : ‘iso’</li>
+<li>For a DEM point : ‘pt mnt’</li>
+<li>For a circle : ‘c’, followed by its diameter in meters</li>
+<li>For a circle from two points: ‘c2pt’</li>
+</ul>
+<p>The order of the points in the file must follow a few rules:</p>
+<ul class="simple">
+<li>The points must follow the outline of the intended line or polygon</li>
+<li>For circles, the center of the circle will be used</li>
+<li>For DEMs, there is no particular order</li>
+</ul>
+<p>The result will be a group of layers containing 3D entities as well as the following attributes:</p>
+<ul class="simple">
+<li>First description (e.g. context number)</li>
+<li>Second description (e.g. type)</li>
+<li>Average Z</li>
+</ul>
+</div>
+<div class="section" id="the-dialog-box">
+<span id="index-0"></span><h1>The dialog box<a class="headerlink" href="#the-dialog-box" title="Permalink to this headline">¶</a></h1>
+<p>The plugin requires two initial parameters:</p>
+<ul class="simple">
+<li>a csv file: <strong>CSV File</strong></li>
+<li>The location for the output files: <strong>Output</strong></li>
+</ul>
+<a class="reference internal image-reference" href="_images/Dialogue.png"><img alt="_images/Dialogue.png" class="align-center" src="_images/Dialogue.png" style="width: 400px; height: 400px;" /></a>
+<p>When a csv file is selected, the data in the first line of the file are shown in order to verify their conformity</p>
+<a class="reference internal image-reference" href="_images/Dialogue2.png"><img alt="_images/Dialogue2.png" class="align-center" src="_images/Dialogue2.png" style="width: 400px; height: 400px;" /></a>
+<p>The <strong>OK</strong> button launches the program and loads the layers onto the map</p>
+</div>
+<div class="section" id="codification-booklet">
+<h1>Codification booklet<a class="headerlink" href="#codification-booklet" title="Permalink to this headline">¶</a></h1>
+<p>Example of the svg codification booklet, in A6 page format</p>
+<a class="reference internal image-reference" href="_images/LivretCodif_EN.svg"><div align="center" class="align-center"><img alt="_images/LivretCodif_EN.svg" height="600px" src="_images/LivretCodif_EN.svg" width="400px" /></div>
+</a>
+</div>
+<div class="section" id="source">
+<h1>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<p>The source code can be found at the following address:</p>
+<p><a class="reference external" href="https://github.com/FFouriaux/Anaximandre1.4">https://github.com/FFouriaux/Anaximandre1.4</a></p>
+</div>
+<div class="section" id="about">
+<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
+<p>Design & Developpement: F. Fouriaux --
+Translation : R. Lacey</p>
+<hr class="docutils" />
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="" alt=""/>
+            </a></p>
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Documentation for the Anaximandre plugin</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#the-dialog-box">The dialog box</a></li>
+<li><a class="reference internal" href="#codification-booklet">Codification booklet</a></li>
+<li><a class="reference internal" href="#source">Source</a></li>
+<li><a class="reference internal" href="#about">About</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Anaximandre 1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2026, F. Fouriaux.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+    </div>
+  </body>
+</html>

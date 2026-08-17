@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/plugins/Anaximandre">
+        <file>icon.png</file>
+		<file>help.svg</file>
+    </qresource>
+</RCC>
